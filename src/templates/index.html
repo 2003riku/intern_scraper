@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インターン情報自動取得システム</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">インターン情報自動取得システム</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">このシステムについて</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">インターン情報ダッシュボード</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card text-white bg-primary mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">登録企業数</h5>
+                                        <p class="card-text display-4">{{ total_companies }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-white bg-success mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">インターン数</h5>
+                                        <p class="card-text display-4">{{ total_internships }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-white bg-info mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">最終更新日</h5>
+                                        <p class="card-text display-6">{{ last_updated }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">インターン情報一覧</h3>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" id="searchInput" class="form-control" placeholder="企業名・インターン名で検索">
+                                </div>
+                                <div class="col-md-3">
+                                    <select id="industryFilter" class="form-select">
+                                        <option value="">業種（全て）</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select id="marketFilter" class="form-select">
+                                        <option value="">市場区分（全て）</option>
+                                        <option value="プライム">プライム</option>
+                                        <option value="スタンダード">スタンダード</option>
+                                        <option value="グロース">グロース</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button id="resetFilters" class="btn btn-secondary w-100">リセット</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover" id="internshipsTable">
+                                <thead>
+                                    <tr>
+                                        <th>企業名</th>
+                                        <th>インターンシップ名</th>
+                                        <th>募集開始日</th>
+                                        <th>募集締切日</th>
+                                        <th>対象</th>
+                                        <th>詳細</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="internshipsTableBody">
+                                    <!-- JavaScriptで動的に生成 -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="pagination" class="d-flex justify-content-center mt-3">
+                            <!-- JavaScriptでページネーションを生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="about">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">このシステムについて</h3>
+                        <p>このシステムは、就活生向けにインターン情報を自動収集・整理するためのツールです。以下の特徴があります：</p>
+                        <ul>
+                            <li>日本の上場企業（プライム、スタンダード、グロース）を中心に情報収集</li>
+                            <li>就活サイトと企業の公式採用ページから情報を取得し、ファクトチェックを実施</li>
+                            <li>毎日自動更新で最新のインターン情報を提供</li>
+                            <li>企業名、インターン名、募集期間などで検索・フィルタリング可能</li>
+                        </ul>
+                        <p>データは毎日更新されます。最終更新日: <span class="fw-bold">{{ last_updated }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>インターン情報自動取得システム</h5>
+                    <p>就活生のためのインターン情報自動収集ツール</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2025 インターン情報自動取得システム</p>
+                    <p>最終更新日: {{ last_updated }}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

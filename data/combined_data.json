@@ -1,0 +1,124 @@
+{
+  "companies": [
+    {
+      "id": "test_company_1",
+      "name": "テスト企業1",
+      "stock_code": "1234",
+      "market": "プライム",
+      "source": "テスト",
+      "official_site": "https://example.com/company1",
+      "career_site": "https://example.com/company1/recruit",
+      "internships": [
+        {
+          "id": "test_company_1_intern_1",
+          "company_id": "test_company_1",
+          "company_name": "テスト企業1",
+          "title": "サマーインターンシップ2025",
+          "period": "2週間",
+          "start_date": "2025-08-01",
+          "end_date": "2025-08-15",
+          "target": "大学3年生、修士1年生",
+          "application_url": "https://example.com/company1/intern/summer",
+          "source": "企業採用サイト",
+          "last_updated": "2025-05-17",
+          "verification": {
+            "score": 0.8,
+            "sources": [
+              "企業採用サイト"
+            ],
+            "verified": true
+          }
+        },
+        {
+          "id": "test_company_1_intern_2",
+          "company_id": "test_company_1",
+          "company_name": "テスト企業1",
+          "title": "冬季インターンシップ2025",
+          "period": "1週間",
+          "start_date": "2025-12-01",
+          "end_date": "2025-12-07",
+          "target": "大学3年生、修士1年生",
+          "application_url": "https://example.com/company1/intern/winter",
+          "source": "企業採用サイト",
+          "last_updated": "2025-05-17",
+          "verification": {
+            "score": 0.7,
+            "sources": [
+              "企業採用サイト"
+            ],
+            "verified": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "test_company_2",
+      "name": "テスト企業2",
+      "stock_code": "5678",
+      "market": "スタンダード",
+      "source": "テスト",
+      "official_site": "https://example.com/company2",
+      "career_site": "https://example.com/company2/recruit",
+      "internships": [
+        {
+          "id": "test_company_2_intern_1",
+          "company_id": "test_company_2",
+          "company_name": "テスト企業2",
+          "title": "1Dayインターンシップ",
+          "period": "1日",
+          "start_date": "2025-07-15",
+          "end_date": "2025-07-15",
+          "target": "大学2年生以上",
+          "application_url": "https://example.com/company2/intern/oneday",
+          "source": "マイナビ",
+          "last_updated": "2025-05-17",
+          "verification": {
+            "score": 0.6,
+            "sources": [
+              "マイナビ",
+              "企業採用サイト"
+            ],
+            "verified": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "test_company_3",
+      "name": "テスト企業3",
+      "stock_code": "9012",
+      "market": "グロース",
+      "source": "テスト",
+      "official_site": "https://example.com/company3",
+      "career_site": "https://example.com/company3/recruit",
+      "internships": [
+        {
+          "id": "test_company_3_intern_1",
+          "company_id": "test_company_3",
+          "company_name": "テスト企業3",
+          "title": "長期インターンシップ",
+          "period": "3ヶ月",
+          "start_date": "2025-09-01",
+          "end_date": "2025-11-30",
+          "target": "大学3年生、修士1年生",
+          "application_url": "https://example.com/company3/intern/long",
+          "source": "リクナビ",
+          "last_updated": "2025-05-17",
+          "verification": {
+            "score": 0.9,
+            "sources": [
+              "リクナビ",
+              "企業採用サイト"
+            ],
+            "verified": true
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "last_updated": "2025-05-17",
+    "total_companies": 3,
+    "total_internships": 4
+  }
+}

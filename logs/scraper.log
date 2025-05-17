@@ -1,0 +1,31 @@
+2025-05-17 03:35:00,570 - utils - INFO - Starting data collection at 2025-05-17 03:35:00.570856
+2025-05-17 03:35:00,571 - utils - INFO - Skipping company collection
+2025-05-17 03:35:00,571 - utils - INFO - Skipping internship collection
+2025-05-17 03:35:00,571 - utils - INFO - Combining company and internship data...
+2025-05-17 03:35:00,571 - utils - WARNING - File not found: ../data/companies.json
+2025-05-17 03:35:00,571 - utils - WARNING - File not found: ../data/internships.json
+2025-05-17 03:35:00,571 - utils - ERROR - Failed to load company or internship data
+2025-05-17 03:35:00,571 - utils - ERROR - Failed to combine data
+2025-05-17 03:35:00,571 - utils - ERROR - Script execution failed
+2025-05-17 03:35:42,044 - utils - INFO - Starting tests...
+2025-05-17 03:35:42,044 - utils - INFO - Creating test data...
+2025-05-17 03:35:42,045 - utils - INFO - Data saved to ../data/companies.json
+2025-05-17 03:35:42,045 - utils - INFO - Data saved to ../data/internships.json
+2025-05-17 03:35:42,045 - utils - INFO - Created test data: 3 companies and 4 internships
+2025-05-17 03:35:42,045 - utils - INFO - Testing data combination...
+2025-05-17 03:35:42,045 - utils - INFO - Data loaded from ../data/companies.json
+2025-05-17 03:35:42,046 - utils - INFO - Data loaded from ../data/internships.json
+2025-05-17 03:35:42,046 - utils - INFO - Data saved to ../data/combined_data.json
+2025-05-17 03:35:42,046 - utils - INFO - Combined data saved to ../data/combined_data.json
+2025-05-17 03:35:42,046 - utils - INFO - Data combination test passed
+2025-05-17 03:35:42,046 - utils - INFO - Data loaded from ../data/combined_data.json
+2025-05-17 03:35:42,046 - utils - INFO - Combined data contains 3 companies and 4 internships
+2025-05-17 03:35:42,046 - utils - INFO - Meta data: last_updated=2025-05-17, total_companies=3, total_internships=4
+2025-05-17 03:35:42,046 - utils - INFO - Validating data structure...
+2025-05-17 03:35:42,046 - utils - INFO - Data loaded from ../data/companies.json
+2025-05-17 03:35:42,046 - utils - INFO - Data loaded from ../data/internships.json
+2025-05-17 03:35:42,047 - utils - INFO - Data loaded from ../data/combined_data.json
+2025-05-17 03:35:42,047 - utils - INFO - Data structure validation completed
+2025-05-17 03:35:42,047 - utils - INFO - Data saved to ../data/test_results.json
+2025-05-17 03:35:42,047 - utils - INFO - Tests completed
+2025-05-17 03:35:42,047 - utils - INFO - All tests passed
